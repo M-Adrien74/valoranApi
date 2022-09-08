@@ -1,0 +1,9 @@
+<div *ngIf="json | async as reponseApi" class="mesCartes">
+  <div *ngFor="let personnages of reponseApi.data">
+    <div *ngIf="personnages.isPlayableCharacter" class="carte">
+      <h1 class="carte__titre">{{personnages.displayName}}</h1>
+      <img [src]="personnages.displayIcon" alt="iconPersonnageValorant" class="carte__icone">
+      <p class="carte__description">{{personnages.description}}</p>
+    </div>
+  </div>
+</div>

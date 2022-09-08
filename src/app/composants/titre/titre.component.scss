@@ -1,0 +1,32 @@
+@import "app.utiles";
+
+.titre {
+  background: #ff445d;
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25vh;
+  text-shadow: 0 0 30px #ebf5e8, 2px 2px 2px #174422;
+
+  &__index {
+    color: black;
+    text-decoration: none;
+  }
+}
+
+.navBar {
+  display: flex;
+  justify-content: center;
+  background: black;
+
+  &__link {
+    text-decoration: none;
+    font-size: 3vh;
+    color: aliceblue;
+    height: 5vh;
+    margin-left: 50px;
+
+
+  }
+}
