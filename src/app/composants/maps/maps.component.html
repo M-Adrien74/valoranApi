@@ -1,8 +1,16 @@
 <div *ngIf="json | async as reponseApi" class="mesCartes">
   <div *ngFor="let map of reponseApi.data" class="cartes">
+
     <div class="cartes__titre">
       <h1>{{map.displayName}}</h1>
     </div>
     <img [src]="map.splash" alt="iconMapValorant" class="cartes__icone">
+    <button *ngIf="voirplus" (click)="voirPlus()">Detail</button>
+    <button class="cartes__btn" *ngIf="!voirplus" (click)="voirPlus()">Voir moins</button>
+    <div *ngIf="!voirplus">
+      <img [src]="map.displayIcon" class="cartes__detailCarte" alt="detailCarteValorant">
+    </div>
+
   </div>
+
 </div>

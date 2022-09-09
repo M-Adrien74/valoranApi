@@ -7,13 +7,15 @@ import { PersonnagesComponent } from './composants/personnages/personnages.compo
 import { TitreComponent } from './composants/titre/titre.component';
 import {HttpClientModule} from "@angular/common/http";
 import { MapsComponent } from './composants/maps/maps.component';
+import { MapComponent } from './composants/map/map.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonnagesComponent,
     TitreComponent,
-    MapsComponent
+    MapsComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,

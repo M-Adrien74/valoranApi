@@ -12,6 +12,7 @@ import {ApiService} from "../../services/api.service";
 })
 export class MapsComponent {
   json: Observable<Json<Map>>
+  voirplus: boolean = true
 
   constructor(
     private api: ApiService
@@ -20,4 +21,8 @@ export class MapsComponent {
   }
 
 
+  public voirPlus(): void {
+    this.voirplus = !this.voirplus;
+    
+  }
 }
