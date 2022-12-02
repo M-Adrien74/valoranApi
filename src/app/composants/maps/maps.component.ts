@@ -12,17 +12,23 @@ import {ApiService} from "../../services/api.service";
 })
 export class MapsComponent {
   json: Observable<Json<Map>>
-  voirplus: boolean = true
+  voirplus: boolean[] = [false, false, false, false, false, false, false, false, false]
 
   constructor(
     private api: ApiService
   ) {
+
     this.json = this.api.getMap();
+    this.json.subscribe((e) => {
+
+
+    })
   }
 
 
-  public voirPlus(): void {
-    this.voirplus = !this.voirplus;
-    
+  public voirPlus(index: number): void {
+    document.getElementsByTagName("button");
+    this.voirplus[index] = !this.voirplus[index];
+
   }
 }
